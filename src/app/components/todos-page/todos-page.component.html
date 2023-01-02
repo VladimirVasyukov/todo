@@ -1,0 +1,24 @@
+<h4>Создать заметку</h4>
+<div class="input__wrapper">
+  <input class="input"
+         type="text"
+         placeholder="Название заметки"
+         #input
+         (keydown.enter)="addTodo(input)" />
+  <button pButton
+          pRipple
+          type="button"
+          icon="pi pi-check"
+          class="p-button"
+          (click)="addTodo(input)">
+  </button>
+</div>
+
+<app-filters [filters]="filters"
+             [active]="activeFilters$ | async"
+             (update)="changeTodoFilter($event)">
+</app-filters>
+<app-todos [todos]="todos$ | async"
+           (delete)="deleteTodo($event)"
+           (complete)="completeTodo($event)">
+</app-todos>

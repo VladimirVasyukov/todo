@@ -1,0 +1,22 @@
+<div class="todo">
+    <p-checkbox 
+    [binary]="true" 
+    [formControl]="control" 
+    class="checkbox"
+    >
+    </p-checkbox>
+    <label for="binary">
+        {{checked}}
+    </label>
+    <span class="todo__title">
+        {{todo.title}}
+    </span>
+</div>
+<a>
+    <button pButton pRipple type="button" 
+    icon="pi pi-times" 
+    class="p-button p-button-danger" 
+    (click)="delete.emit(todo.id)"
+    >
+    </button>
+</a>

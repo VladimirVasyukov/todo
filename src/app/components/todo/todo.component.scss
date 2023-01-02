@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 355px;
+  min-height: 36px;
+  margin-bottom: 10px;
+  border: 1px solid #D8DAE0;;
+}
+
+.checkbox {
+  padding: 0 6px;
+}
+
+.todo__title {
+  padding: 0 10px;
+  font-size: 14px;
+  color: #434652;
+}
+
+.p-button {
+  max-height: 34px;
+  max-width: 34px;
+}

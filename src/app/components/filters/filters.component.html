@@ -1,0 +1,11 @@
+<h4 class="collection-header">Список заметок</h4>
+<div>
+  <span class="filter__title">Показывать</span>
+  <select class="select" [formControl]="control">
+    <option
+      *ngFor="let filter of filters;" 
+      [ngValue]="filter.value">
+      {{filter.name}}
+    </option>
+  </select>
+</div>

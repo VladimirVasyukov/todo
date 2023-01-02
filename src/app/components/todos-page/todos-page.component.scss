@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  padding: 72px 76px;
+  margin: 0 auto;
+}
+
+.input__wrapper {
+  display: flex;
+}
+
+.input {
+  min-width: 320px;
+  min-height: 40px;
+  margin-bottom: 54px;
+  padding: 0 5px;
+  border: 1px solid#D3D4DB;
+}
+
+input::placeholder {
+  padding: 0 10px;
+}
+
+.p-button {
+  max-width: 40px;
+  max-height: 40px;
+}
+
