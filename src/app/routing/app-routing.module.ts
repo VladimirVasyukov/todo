@@ -3,19 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { TodosPageComponent } from '../components/todos-page/todos-page.component';
 
 const routes: Routes = [
-    {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'components'
-    },
-    {
-        path: 'components',
-        component: TodosPageComponent
-    },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'components',
+  },
+  {
+    path: 'components',
+    component: TodosPageComponent,
+  },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

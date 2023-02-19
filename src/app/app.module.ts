@@ -5,11 +5,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
+
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 
-import { AppRoutingModule } from './routing/app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './routing/app-routing.module';
 import { TodosPageComponent } from './components/todos-page/todos-page.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoComponent } from './components/todo/todo.component';
@@ -19,26 +20,26 @@ import { FiltersComponent } from './components/filters/filters.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule,
-    AppRoutingModule,
     CheckboxModule,
-    ButtonModule
+    ButtonModule,
   ],
   declarations: [
     AppComponent,
     TodosPageComponent,
     TodosComponent,
     TodoComponent,
-    FiltersComponent
+    FiltersComponent,
   ],
   providers: [
-    { provide: NG_ENTITY_SERVICE_CONFIG,
-      useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }}
+    {
+      provide: NG_ENTITY_SERVICE_CONFIG,
+      useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' },
+    },
   ],
-  exports: [
-    TodosComponent,
-    FiltersComponent],
-  bootstrap: [AppComponent]
+  exports: [TodosComponent, FiltersComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,9 +1,9 @@
 <h4>Создать заметку</h4>
 <div class="input__wrapper">
-  <input class="input"
+  <input #input
+         class="input"
          type="text"
          placeholder="Название заметки"
-         #input
          (keydown.enter)="addTodo(input)" />
   <button pButton
           pRipple
